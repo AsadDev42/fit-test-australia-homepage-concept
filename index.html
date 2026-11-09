@@ -175,7 +175,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 ------------------------------------------------------------------- */
 .hero{padding-block:clamp(48px,6vw,88px) clamp(72px,8vw,112px);background:var(--white);overflow-x:clip}
 .hero__grid{align-items:center}
-.hero__copy{grid-column:1 / span 7;padding-right:clamp(0px,3vw,48px)}
+.hero__copy{grid-column:1 / span 6;padding-right:clamp(0px,3vw,48px)}
 .hero h1{margin-top:26px;font-size:clamp(2.6rem,5.1vw,4.5rem);line-height:1.03;letter-spacing:-.035em}
 .hero h1 em{display:block;font-style:normal;color:var(--blue)}
 .hero .lead{margin-top:26px;max-width:560px}
@@ -185,13 +185,13 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 .trust .tick{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px}
 .trust .ic{stroke-width:3}
 
-.hero__media{grid-column:8 / span 5;position:relative}
+.hero__media{grid-column:7 / span 6;position:relative}
 .photo{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--navy);box-shadow:var(--sh-lg)}
 .photo img{width:100%;height:100%;object-fit:cover}
-.hero__photo{aspect-ratio:4/5}
-.hero__photo img{object-position:17% 50%;animation:photoIn 1.8s var(--ease) both}
+.hero__photo{aspect-ratio:1/1.04}
+.hero__photo img{object-position:0% 40%;filter:brightness(1.1) contrast(1.05) saturate(1.06);animation:photoIn 1.8s var(--ease) both}
 @keyframes photoIn{from{transform:scale(1.1)}}
-.hero__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,43,0) 60%,rgba(10,26,43,.4))}
+.hero__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,43,0) 65%,rgba(10,26,43,.22))}
 
 .cap{
   position:absolute;z-index:2;left:16px;right:16px;bottom:16px;
@@ -214,8 +214,9 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 }
 .float strong{display:block;font:800 15.5px/1.2 var(--f-head);letter-spacing:-.01em;color:var(--navy)}
 .float small{display:block;margin-top:3px;font:500 13px/1.4 var(--f-body);color:var(--muted)}
-.float--a{left:-40px;bottom:44px;animation:bob 7s ease-in-out infinite}
-.float--b{right:-18px;top:38px;animation:bob 8s ease-in-out -3s infinite}
+.float--a{left:-36px;bottom:-46px;animation:bob 7s ease-in-out infinite}
+.float--b{right:-30px;top:-46px;animation:bob 8s ease-in-out -3s infinite}
+@media (max-width:1280px){.float--b{right:-12px}}
 @keyframes bob{50%{transform:translateY(-8px)}}
 
 /* ------------------------------------------------------------------
@@ -616,8 +617,8 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
   .hero__copy{padding-right:0}
   .hero__media{margin-top:56px;max-width:540px;width:100%;justify-self:center}
   .hero__photo{aspect-ratio:5/5.4}
-  .float--a{left:-14px}
-  .float--b{right:-10px}
+  .float--a{left:-14px;bottom:-34px}
+  .float--b{right:-10px;top:-34px}
 
   .stats__card{grid-template-columns:repeat(2,1fr);padding:12px 0}
   .stat{padding:28px clamp(20px,4vw,36px)}
@@ -650,8 +651,8 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
   .float{padding:11px 14px 11px 11px;gap:11px}
   .float strong{font-size:14px}
   .float small{font-size:11.5px}
-  .float--a{left:-8px;bottom:26px}
-  .float--b{right:-8px;top:22px}
+  .float--a{left:-8px;bottom:-28px}
+  .float--b{right:-8px;top:-28px}
 
   .stats{padding-block:56px 48px}
   .stat{padding:22px 18px}
@@ -818,7 +819,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
         <img
           src="https://images.unsplash.com/photo-1613620844865-ffb87d753609?auto=format&fit=crop&w=1600&q=80"
           srcset="https://images.unsplash.com/photo-1613620844865-ffb87d753609?auto=format&fit=crop&w=1000&q=78 1000w, https://images.unsplash.com/photo-1613620844865-ffb87d753609?auto=format&fit=crop&w=1600&q=80 1600w, https://images.unsplash.com/photo-1613620844865-ffb87d753609?auto=format&fit=crop&w=2200&q=80 2200w"
-          sizes="(max-width:960px) 175vw, 900px"
+          sizes="(max-width:960px) 160vw, 1000px"
           width="1600" height="1067" fetchpriority="high"
           alt="Industrial worker in a hard hat wearing a half-face respirator in a workshop">
       </div>
