@@ -415,9 +415,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
   transition:background-color .25s,color .25s,border-color .25s,transform .3s var(--ease);
 }
 .slider__btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-2px)}
-.slider__btn .ic-play{display:none}
-.slider__btn[aria-pressed="true"] .ic-pause{display:none}
-.slider__btn[aria-pressed="true"] .ic-play{display:block}
+
 
 /* ------------------------------------------------------------------
    Locations
@@ -477,8 +475,8 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 .post:hover .post__img img{transform:scale(1.06)}
 .post__body{position:relative;display:flex;flex-direction:column;flex:1;padding:26px}
 .post__meta{font:600 13px/1 var(--f-body);color:var(--muted)}
-.post h3{margin-top:12px;font-size:1.25rem;line-height:1.25}
-.post__excerpt{margin-top:12px;font-size:15.5px;line-height:1.65;flex:1}
+.post h3{margin-top:10px;font-size:1.1875rem;line-height:1.25}
+.post__excerpt{margin-top:10px;font-size:15px;line-height:1.6;flex:1}
 .post .link{margin-top:22px}
 .post .link::after{content:"";position:absolute;inset:-500px 0 0 0}
 .blog__foot{display:flex;justify-content:center;margin-top:clamp(32px,4vw,48px)}
@@ -530,7 +528,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
    Footer
 ------------------------------------------------------------------- */
 .footer{background:var(--navy-900);color:rgba(255,255,255,.78);padding-top:clamp(72px,8vw,104px);font-size:15px}
-.footer__grid{row-gap:48px}
+.footer__grid{row-gap:48px;column-gap:clamp(24px,3.3vw,40px)}
 .f-brand{grid-column:1 / span 4}
 .f-services{grid-column:5 / span 2}
 .f-locations{grid-column:7 / span 3}
@@ -547,9 +545,9 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 .footer ul{margin-top:22px;display:grid;gap:13px}
 .footer ul a{color:rgba(255,255,255,.78);transition:color .2s}
 .footer ul a:hover{color:#fff}
-.f-locations ul a{display:flex;justify-content:space-between;gap:14px}
+.f-locations ul a{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:10px}
 .f-locations ul em{font-style:normal;font-size:13px;color:rgba(255,255,255,.64)}
-.f-contact__card{padding:26px;border-radius:var(--r-lg);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.f-contact__card{margin-top:22px;padding:26px;border-radius:var(--r-lg);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
 .f-contact__row{display:flex;gap:14px;align-items:center}
 .f-contact__row + .f-contact__row{margin-top:18px}
 .f-contact__ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(141,185,238,.14);color:var(--blue-light);font-size:20px;flex:none}
@@ -767,8 +765,6 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
     <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
     <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
-    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></symbol>
     <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
     <symbol id="fta-logo" viewBox="2.818 2.83 561.272 230.71"><g><path d="M247.97 96.63c-6.12-4.81-8.24-10.04-7.29-17.3.5-3.68-1.56-5.94-4.85-7.43-3.82-1.7-7.6-3.5-11.28-5.48-6.93-3.78-10.61-9.55-11.21-17.58-.53-7.04-2.69-13.72-7.78-18.92-1.06-1.06-3.15-1.95-4.56-1.7-5.13.85-6.37.32-7.92-4.6-.39-1.27-.6-2.58-.88-3.89-.95-4.63-1.73-9.34-2.97-13.9-.35-1.27-2.23-3.08-3.22-2.97-1.31.14-3.08 1.66-3.61 2.97-1.06 2.62-1.45 5.52-2.09 8.31-1.52 6.76-2.37 13.76-4.63 20.27-2.69 7.85-8.56 9.83-15.88 5.87-4.39-2.44-8.59-5.48-12.38-8.81-1.45-1.27-1.63-4.07-2.12-6.26-.21-.99.25-2.12.46-3.57-3.96 4.7-4.1 10.15.25 13.4 5.55 4.14 11.42 7.92 17.58 11.11 5.34 2.76 12.27.11 14.57-5.45 1.95-4.7 2.97-9.87 4.03-14.89 1.1-5.09 1.7-10.29 2.51-15.46.53.04 1.06.11 1.59.14 0 1.06-.07 2.12 0 3.15.42 5.91 1.45 11.71 4.7 16.69 1.13 1.77 3.4 3.82 5.23 3.89 5.55.25 8.24 3.11 9.44 8.03 1.13 4.6 2.12 9.23 3.29 13.83 2.19 8.67 7.18 14.75 15.92 17.54 2.41.78 4.7 1.91 6.93 3.11 2.23 1.24 3.25 3.25 2.62 5.87-1.1 4.49.32 7.99 3.43 11.42 3.96 4.39 7.99 8.98 10.75 14.18 5.8 10.82 4.07 22.18-.14 33.07-4.81 12.45-10.15 24.69-15.31 37-1.66 3.96-3.32 7.96-5.27 11.78-3.57 6.9-9.27 11.35-17.01 12.38-4.35.6-8.84.39-13.23.14-16.84-.92-28.68-10.47-33.14-26.63-.67-2.44-.92-5.02-1.63-7.43-1.49-5.16-2.62-10.47-4.81-15.31-1.66-3.61-4.42-3.36-5.77.53-1.98 5.77-3.32 11.81-4.67 17.79-.35 1.49.32 3.22.53 4.85.42-6.9 2.79-12.7 7.5-18.39.6 1.59.99 2.55 1.34 3.54 2.76 8.28 5.2 16.66 8.31 24.76 3.71 9.62 10.82 16.06 20.58 19.35 3.93 1.34 8.1 2.26 12.24 2.65 9.58.88 18.85-.28 26.74-6.4 6.93-5.38 10.19-13.16 13.09-21.15 2.79-7.64 5.16-15.56 8.84-22.78 5.69-11.21 9.16-22.95 10.12-35.4.81-9.8-.85-19.56-8.95-25.92Z" fill="currentColor"/><path d="M128.85 154.18c-11.81-8.17-24.83-10.04-38.59-6.86-7.67 1.77-14.93 4.46-20.2 11.03-2.76 3.47-7 5.87-11.42 4.77-5.84-1.49-10.79.21-16.02 2.12-5.13 1.91-10.33 3.82-15.67 5.06-4.63 1.1-7.25-1.77-6.47-6.47 2.23-14.18.6-27.69-6.01-40.6-4.21-8.24-6.3-17.15-7.11-26.38-.71-7.78 2.48-13.44 9.05-17.01 4.92-2.69 10.22-4.63 15.42-6.83 7.32-3.11 14.85-5.73 21.93-9.3 7.53-3.78 12.41-10.01 14.32-18.5.64-2.83 2.19-5.55 3.71-8.1 3.08-5.16 7.67-7.96 13.83-7.36 3.82.39 7.64 1.13 11.42 1.8 5.2.92 7.43 0 10.4-4.28 2.55-3.75 5.09-7.5 7.85-11.11 4.17-5.45 9.69-7.43 16.45-5.94 2.79.6 5.59 1.13 8.84 1.8-9.48-6.37-21.11-5.59-28.72 1.8-2.69 2.62-5.02 5.59-7.36 8.56-2.79 3.5-6.22 5.23-10.72 4.39-2.37-.46-4.74-1.03-7.07-1.59-5.27-1.24-10.01-.42-14.29 3.15-4.63 3.86-7.18 8.91-8.88 14.47-2.62 8.49-7.75 14.89-15.7 18.78-4.53 2.23-9.37 3.78-14.04 5.77-6.37 2.69-13.09 4.81-18.96 8.35C6.17 80.76 1.97 88.75 2.96 99.11c.95 10.29 5.09 19.52 8.74 29 1.95 5.09 3.36 10.54 3.82 15.95.64 7.78.11 15.67.25 23.52.14 7.67 2.79 9.87 10.36 8.98.67-.07 1.34-.18 1.95-.39 7.39-2.58 14.71-5.38 22.18-7.71 2.65-.85 5.94-1.66 8.35-.78 5.73 2.12 9.34-.46 12.87-4.14 2.16-2.23 4.03-4.88 6.54-6.51 18.78-12.06 49.87-9.8 62.11 12.63-1.95-6.51-5.77-11.67-11.28-15.49Z" fill="currentColor"/><path d="M217.34 212.11c-2.76-1.45-5.87-1.17-8.77.81 5.48 1.17 7.71 3.22 6.83 7.22-.64 2.86-2.26 5.66-4 8.06-1.49 2.02-4.14 2.51-6.26.99-2.94-2.05-5.84-4.35-8.21-6.97-1.73-1.95-4.1-4.81-2.05-7.32 1.31-1.63 4.46-1.8 6.65-2.58-.6-.25-1.8-.78-3.04-1.17-2.65-.88-5.45-1.13-7.39 1.1-2.05 2.33-.92 5.02.35 7.39 2.9 5.52 7.29 9.66 12.66 12.77 2.9 1.66 5.66 1.45 8.28-.67 4.7-3.86 7.11-9.02 7.57-14.93.11-1.52-1.24-3.96-2.62-4.7" fill="currentColor"/><path d="M149.97 148.98c4.39-5.48 8.81-5.31 12.73.57.92 1.38 1.84 2.83 2.33 4.39 1.49 4.6 2.86 9.23 4.1 13.94 3.93 14.5 11.46 25.54 27.55 27.62 10.89 1.41 17.75.81 24.09-8.91 1.49-2.3 2.76-4.81 3.89-7.32 1.84-4.24 3.36-8.63 5.23-12.87 3.43-7.64 6.76-15.35 10.61-22.78 7.78-14.96 5.94-33.6-5.55-46.05-2.97-3.22-4.39-6.4-5.02-10.54-.78-5.13-3.61-9.55-8.63-10.86-8.13-2.09-12.98-7.36-15.92-14.61-1.95-4.88-3.01-10.12-4.63-15.14-.92-2.79-1.84-5.73-3.5-8.1-2.65-3.82-6.65-3.57-9.2.32-1.13 1.73-1.95 3.71-2.94 5.55-3.15 5.8-9.12 8.59-15.6 7.46-9.34-1.63-17.01-6.44-24.26-12.24-4.67-3.71-7.67-8.35-8.1-14.29-.25-3.71-2.48-5.27-5.45-6.22-3.08-.95-5.38.67-7.11 3.04-2.09 2.83-4 5.84-6.08 8.67-4.35 5.87-10.12 8.81-17.51 7.96-2.41-.28-4.7-1.1-7.11-1.52-8.88-1.56-12.38-.39-14.78 5.23v.04c-.39.92-.78 1.98-1.13 3.18-.81 2.72-1.87 5.38-3.01 8.06-4.81 10.58-10.47 12.66-15.95 16.8-1.2.53-2.41 1.13-3.57 1.77-11.28 5.2-22.71 7.57-22.71 7.57C21 81.96 12.26 90.45 15.69 105.34c1.95 8.38 5.55 16.45 8.91 24.44 4.35 10.33 6.05 20.94 4.49 32.04-.14.92 0 1.87 0 3.93 4.53-1.98 8.45-3.4 12.03-5.34 5.38-2.94 10.82-4.63 17.08-3.86 2.37.28 5.16-.85 7.36-2.05 3.93-2.23 7.5-5.09 11.32-7.5 15.35-9.66 31.12-11.03 47.36-2.19 4.35 2.37 8.81 4.6 13.23 6.86 6.19 3.11 8.21 2.65 12.48-2.69ZM137.2 91.11v27.09h-11.35V91.11h-42.8v3.86h26.56l-7.32 9.44H83.05v13.79H71.7V81.63h88.35l-7.36 9.48zm4.7 27.1 23.41-32.5c.74-1.06 1.77-2.02 3.08-2.83 1.45-.88 2.86-1.31 4.21-1.31s2.79.42 4.21 1.31c1.24.78 2.26 1.7 3.11 2.83l22.85 32.5h-42.94l6.83-9.48h15.24l-9.48-13.12-16.48 22.6z" fill="currentColor"/><path d="M317.51 93.73h8.28v41.98h8.13V93.76h8.13v-7.07c-.07-.04-.11-.04-.14-.04-8.13-.07-16.27-.07-24.4-.07v7.14Z" fill="currentColor"/><path fill="currentColor" d="M368.08 128.57h-13.54v-14.18h11.17v-7.18h-11.17V93.73h13.33v-7.11H346.4v49.06h21.68z"/><path d="M389.66 135.71c2.65-.57 4.85-1.91 6.15-4.42.81-1.56 1.06-3.25 1.1-4.99.04-2.51.04-4.99 0-7.46-.04-1.45-.25-2.9-.95-4.28-.81-1.63-2.05-2.9-3.57-3.86-2.44-1.52-4.95-2.94-7.43-4.39-.92-.53-1.84-1.06-2.69-1.66-.95-.67-1.63-1.63-1.66-2.83-.07-1.73-.18-3.47-.07-5.2.11-2.09 1.2-3.18 3.22-3.54.5-.07.99-.07 1.49-.04 2.05.14 3.43 1.45 3.47 3.5.07 2.3.07 4.6.07 6.9 0 .21 0 .42.04.6h7.92c0-2.97.07-5.87-.04-8.81-.11-4.21-2.55-7.25-6.58-8.49-3.43-1.03-6.9-1.06-10.33-.21-4.6 1.17-7.22 4.39-7.32 8.98-.04 2.51-.04 5.02 0 7.57.04 2.41.88 4.56 2.72 6.19 1.03.92 2.16 1.77 3.32 2.48 2.55 1.56 5.13 2.97 7.71 4.46 1.34.78 2.44 1.84 2.51 3.43.11 2.09.11 4.21 0 6.3-.07 1.59-1.2 2.76-2.72 3.11-.64.14-1.27.18-1.91.14-1.8-.11-3.11-1.2-3.5-2.94-.11-.46-.14-.95-.14-1.45v-7.36h-7.99v8.17c0 .95.07 1.95.21 2.9.53 3.54 2.55 5.87 5.98 6.9 3.61 1.1 7.32 1.06 11 .28Z" fill="currentColor"/><path d="M408.01 135.68h8.13V94.44c0-.53.11-.71.67-.71 2.3.04 4.6.04 6.9.04h.6v-7.11h-24.47v7.11h8.17z" fill="currentColor"/><path fill="currentColor" d="M364.41 75.52h8.13V33.53h8.13v-7.1H356.2v7.14h8.21z"/><path fill="currentColor" d="M351.67 26.43v49.06h-8.06V26.43z"/><path fill="currentColor" d="M325.54 54.58h10.89V47.4h-10.89V33.57h13.08v-7.14H317.4v49.12h8.14z"/><path d="M366.17 147.56v36.78c0 .6-.04 1.2-.11 1.8-.18 1.63-1.06 2.65-2.58 3.01-1.06.25-2.09.21-3.15-.04-1.31-.28-2.09-1.1-2.37-2.37-.14-.64-.21-1.31-.21-1.95-.04-12.45-.04-24.9-.04-37.31v-.67h-8.13v38.94c0 .85 0 1.7.14 2.51.46 3.36 2.16 5.84 5.38 7.14 1.52.6 3.11.88 4.74.99 2.72.18 5.45.14 8.06-.71 2.48-.78 4.42-2.26 5.45-4.7.67-1.56.88-3.18.88-4.85v-39.29h-8.13c.07.25.07.5.07.71Z" fill="currentColor"/><path fill="currentColor" d="M505.91 146.82h-8.1v49.05h20.66v-7.28h-12.56z"/><path fill="currentColor" d="M407.63 153.96h8.17v41.95h8.17v-41.95h8.13v-7.11h-24.47z"/><path d="M404.51 177.27c-.35-2.58-1.73-4.56-3.86-6.01-2.23-1.49-4.56-2.76-6.86-4.14-1.27-.74-2.55-1.45-3.75-2.26-.99-.67-1.63-1.66-1.7-2.86-.07-1.73-.14-3.47-.07-5.2.11-1.87 1.03-3.01 2.65-3.4.57-.14 1.2-.18 1.8-.18 2.23 0 3.68 1.34 3.75 3.57.07 2.26.04 4.53.07 6.79v.67h7.96c.04-.14.04-.21.04-.35 0-2.83.04-5.66-.04-8.49-.14-4.17-2.55-7.25-6.54-8.45-3.43-1.03-6.86-1.06-10.33-.21-4.56 1.13-7.22 4.35-7.32 8.95-.07 2.55-.04 5.09 0 7.6.04 2.16.74 4.07 2.19 5.69 1.13 1.2 2.44 2.16 3.82 2.97 2.58 1.49 5.16 2.97 7.71 4.46 1.34.78 2.44 1.84 2.51 3.43.11 2.09.11 4.17.04 6.22-.07 1.59-1.17 2.76-2.72 3.11-.64.14-1.31.18-1.98.14-1.77-.07-3.08-1.17-3.47-2.86-.11-.5-.18-.99-.18-1.52-.04-2.23 0-4.49 0-6.76v-.57h-7.99v.64c0 2.51 0 4.99.04 7.5 0 .99.04 2.02.21 3.01.46 2.76 1.84 4.92 4.42 6.19 1.73.85 3.57 1.2 5.48 1.34 2.72.18 5.41.11 8.03-.71 2.94-.92 4.99-2.76 5.8-5.8.32-1.2.42-2.48.46-3.71.07-2.26.04-4.56.04-6.86-.07-.6-.11-1.27-.21-1.95Z" fill="currentColor"/><path fill="currentColor" d="M531.2 146.82v49.06h-8.06v-49.06z"/><path d="m326.67 146.82-.53 2.86c-.88 4.81-1.8 9.66-2.69 14.47-.85 4.6-1.73 9.23-2.58 13.86s-1.73 9.23-2.58 13.86c-.25 1.27-.5 2.55-.78 3.86v.21h7.89c.57-3.68 1.17-7.32 1.77-10.93h8.98c.6 3.64 1.17 7.29 1.73 10.89h8.28c-3.08-16.38-6.15-32.72-9.23-49.06-3.47-.04-6.86-.04-10.26-.04Zm1.52 31.37c1.13-7.14 2.26-14.29 3.36-21.43h.11c1.13 7.14 2.23 14.29 3.36 21.47-2.23-.04-4.46-.04-6.83-.04" fill="currentColor"/><path d="M554.9 146.82h-10.26c-3.04 16.38-6.08 32.72-9.12 49.06h7.85c.57-3.64 1.17-7.29 1.73-10.89h8.98c.6 3.68 1.17 7.29 1.73 10.89h8.28c-3.04-16.38-6.12-32.72-9.2-49.06Zm-8.7 31.41c1.13-7.18 2.26-14.32 3.4-21.5h.11l3.4 21.5h-6.9Z" fill="currentColor"/><path d="M456.26 175.01c3.43-1.59 4.99-4.46 5.13-8.1.11-3.08.07-6.19.07-9.27 0-.88-.04-1.8-.18-2.69-.5-3.29-2.19-5.66-5.31-6.97-2.02-.85-4.14-1.17-6.3-1.2-4.28-.04-8.59 0-12.87 0h-.35v49.09h8.1v-19.56c1.2 0 2.37.04 3.54 0 .42 0 .57.14.67.53.74 2.3 1.45 4.63 2.19 6.93 1.24 3.89 2.51 7.82 3.75 11.71.11.35.25.5.64.46.64-.04 1.31 0 1.98 0h5.84c-2.33-6.97-4.67-13.9-7-20.8.04-.11.07-.14.11-.14Zm-3.01-9.48c-.04 2.3-1.49 3.71-3.78 3.75-1.49.04-2.97.04-4.46.04-.14 0-.32 0-.5-.04v-15.24l.07-.07c1.84.04 3.68-.07 5.52.11 1.95.18 3.08 1.63 3.11 3.68.11 2.58.11 5.16.04 7.78Z" fill="currentColor"/><path d="M474.26 146.82c-3.04 16.38-6.08 32.72-9.13 49.06h7.85c.57-3.64 1.17-7.29 1.73-10.89h8.98c.6 3.64 1.17 7.25 1.77 10.89h8.28c-3.08-16.38-6.15-32.72-9.23-49.06h-10.26Zm1.52 31.41c1.13-7.18 2.26-14.32 3.4-21.47.04 0 .07 0 .11-.04l3.4 21.5h-6.9Z" fill="currentColor"/><path fill="currentColor" d="M295.47 2.83v230.71h3.11V2.83z"/></g></symbol>
   </defs>
@@ -856,7 +852,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">Full face respirator</p>
             <h3>3M Full Face Mask 6000 Series</h3>
-            <p class="product__desc">Reusable mask with a polycarbonate lens, Cool Flow valve and four-strap harness. Takes 3M gas, vapour and particulate filters.</p>
+            <p class="product__desc">Soft elastomeric facepiece with a large polycarbonate lens and 3M Cool Flow valve.</p>
             <div class="product__foot"><span class="price">$396.00</span><a class="link" aria-label="View 3M Full Face Mask 6000 Series in the FTA shop" href="https://www.fta.net.au/product-page/3m-reusable-full-face-mask-6000-series">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -865,7 +861,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">Respirator kit</p>
             <h3>3M 6225 P2 Dust/Particle Respirator Kit</h3>
-            <p class="product__desc">3M 6000 half mask with 2135 P2/P3 filters in a plastic container. Suited to silica dust and asbestos exposure.</p>
+            <p class="product__desc">3M 6000 half mask with 2135 P2/P3 filters, stored in a plastic container.</p>
             <div class="product__foot"><span class="price">$77.00</span><a class="link" aria-label="View 3M 6225 P2 Dust/Particle Respirator Kit in the FTA shop" href="https://www.fta.net.au/product-page/3m-6225-silica-dust-kit">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -874,7 +870,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">N95 mask</p>
             <h3>3M N95 Mask 1870, Box of 20</h3>
-            <p class="product__desc">NIOSH certified N95 in a flat fold, individually wrapped and fluid resistant. GST included.</p>
+            <p class="product__desc">NIOSH certified N95, individually wrapped and fluid resistant. 20 masks per box.</p>
             <div class="product__foot"><span class="price">$55.00</span><a class="link" aria-label="View 3M N95 Mask 1870, Box of 20 in the FTA shop" href="https://www.fta.net.au/product-page/3m-1870-box-of-20-masks">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -883,7 +879,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">Full face respirator</p>
             <h3>Sundstrom SR200 Full Face Respirator</h3>
-            <p class="product__desc">One-size silicone mask with a scratch-resistant polycarbonate visor. Supplied with a storage box.</p>
+            <p class="product__desc">One-size silicone mask with a scratch-resistant polycarbonate visor.</p>
             <div class="product__foot"><span class="price">$540.00</span><a class="link" aria-label="View Sundstrom SR200 Full Face Respirator in the FTA shop" href="https://www.fta.net.au/product-page/sundstrom-sr200-full-face-respirator">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -892,7 +888,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">PAPR</p>
             <h3>Trident Zenyth All-In-One PAPR</h3>
-            <p class="product__desc">Powered air purifying respirator with an integrated safety helmet and visor. Up to 7 hours of runtime.</p>
+            <p class="product__desc">All-in-one PAPR with an integrated safety helmet and visor. Up to 7 hours of runtime.</p>
             <div class="product__foot"><span class="price"><s>$1,430.00</s>$1,320.00</span><a class="link" aria-label="View Trident Zenyth All-In-One PAPR in the FTA shop" href="https://www.fta.net.au/product-page/trident-zenyth-all-in-one-papr">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -901,7 +897,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">PAPR</p>
             <h3>CleanAIR CA-40G with Flip-Up Visor and AerGo PAPR</h3>
-            <p class="product__desc">Constant airflow control with low battery and low airflow alarms. Up to 10 hours on a standard battery. Free PAPR training with purchase.</p>
+            <p class="product__desc">Constant airflow with low battery and low airflow alarms. Free PAPR training with purchase.</p>
             <div class="product__foot"><span class="price">$2,290.00</span><a class="link" aria-label="View CleanAIR CA-40G with Flip-Up Visor and AerGo PAPR in the FTA shop" href="https://www.fta.net.au/product-page/cleanair-ca-40g-with-flip-up-visor-with-aergo-papr">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -910,7 +906,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">Filters</p>
             <h3>3M Particulate Filters 6035 P2/P3</h3>
-            <p class="product__desc">Solid top design with a bayonet connection. Fits 3M 6000, 7000 and 7500 Series half and full respirators.</p>
+            <p class="product__desc">Solid top design with bayonet connection. Fits 3M 6000, 7000 and 7500 Series respirators.</p>
             <div class="product__foot"><span class="price">$29.70</span><a class="link" aria-label="View 3M Particulate Filters 6035 P2/P3 in the FTA shop" href="https://www.fta.net.au/product-page/3m-particulate-filters-6035-p2-p3">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -919,7 +915,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="product__body">
             <p class="product__tag">Fit test supplies</p>
             <h3>Fit Test Probe Refill Kit</h3>
-            <p class="product__desc">500 probes and 500 push nuts for disposable facepieces. Works with TSI 8038, 8040 and 8048 PortaCount and AccuFit 9000.</p>
+            <p class="product__desc">500 probes and 500 push nuts. Fits TSI 8038, 8040 and 8048 PortaCount and AccuFit 9000.</p>
             <div class="product__foot"><span class="price">$165.00</span><a class="link" aria-label="View Fit Test Probe Refill Kit in the FTA shop" href="https://www.fta.net.au/product-page/fit-test-probe-refill-kit-for-disposable-respirators">View <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
@@ -931,7 +927,6 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
       <div class="shop__actions">
         <div class="slider__ctrl" role="group" aria-label="Product slider controls">
           <button class="slider__btn" type="button" data-slider-prev aria-label="Previous products"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
-          <button class="slider__btn" type="button" data-slider-toggle aria-label="Pause slider" aria-pressed="false"><svg class="ic ic-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="ic ic-play" aria-hidden="true"><use href="#i-play"/></svg></button>
           <button class="slider__btn" type="button" data-slider-next aria-label="Next products"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </div>
         <a class="btn btn--navy" href="https://www.fta.net.au/shop">Visit the FTA Shop <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -1025,15 +1020,15 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
       <ul class="benefits">
         <li class="benefit" data-reveal>
           <span class="benefit__ic"><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg></span>
-          <div><h3>RESP-FIT Accredited Fit Testers</h3><p>FTA is RESP-FIT accredited and a sponsor of the program, Australia’s first for respiratory fit testing.</p></div>
+          <div><h3>RESP-FIT Accredited Fit Testers</h3><p>RESP-FIT accredited, and a proud sponsor of the program.</p></div>
         </li>
         <li class="benefit" data-reveal style="--d:140ms">
           <span class="benefit__ic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
-          <div><h3>Experienced Professionals</h3><p>Our team has tested workers in tunnelling, construction, mining and healthcare, including student clinical placements.</p></div>
+          <div><h3>Experienced Professionals</h3><p>Experience across tunnelling, construction, mining and healthcare.</p></div>
         </li>
         <li class="benefit" data-reveal style="--d:210ms">
           <span class="benefit__ic"><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg></span>
-          <div><h3>Mobile Testing Services</h3><p>We can come to your site. Mobile fit testing is available nationally, on top of our seven clinics.</p></div>
+          <div><h3>Mobile Testing Services</h3><p>We offer mobile services to fit test nationally.</p></div>
         </li>
         <li class="benefit" data-reveal style="--d:280ms">
           <span class="benefit__ic"><svg class="ic" aria-hidden="true"><use href="#i-file-check"/></svg></span>
@@ -1205,7 +1200,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 
     <div class="freq" data-reveal>
       <svg class="ic" aria-hidden="true"><use href="#i-repeat"/></svg>
-      <p><strong>How often?</strong> When a respirator is first issued, at least once a year, and whenever you are issued a new size, style, make or model, as set out in AS/NZS 1715:2009.</p>
+      <p><strong>How often?</strong> When a respirator is first issued, at least yearly, and with any new size, style, make or model (AS/NZS 1715:2009).</p>
     </div>
     <p class="note" data-reveal>Prices as listed on fta.net.au. To be verified by Fit Test Australia before publication.</p>
   </div>
@@ -1262,7 +1257,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
       <span class="locator__mobile-ic"><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg></span>
       <div>
         <h3>Need testing on site?</h3>
-        <p>Mobile fit testing is available nationally. Tell us about your site and headcount and we will get back to you.</p>
+        <p>Mobile fit testing is available nationally. Tell us about your site and we will get back to you.</p>
       </div>
       <a class="btn btn--light" href="mailto:info@fta.net.au?subject=Quote%20request">Request a Quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
@@ -1287,7 +1282,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="post__body">
             <p class="post__meta"><time datetime="2026-07-15">15 July 2026</time></p>
             <h3>Are Particulate Filter Pad Inserts Creating an Avoidable Respiratory Protection Risk?</h3>
-            <p class="post__excerpt">Respiratory protection depends on a long list of correct decisions. Adding particulate pads to gas or vapour cartridges adds more, and we regularly see three recurring problems.</p>
+            <p class="post__excerpt">Respiratory protection programs depend on workers making a long list of correct decisions.</p>
             <a class="link" href="https://www.fta.net.au/post/are-particulate-filter-pad-inserts-creating-an-avoidable-respiratory-protection-risk" aria-label="Read the article: Are Particulate Filter Pad Inserts Creating an Avoidable Respiratory Protection Risk?">Read Article <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -1298,7 +1293,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="post__body">
             <p class="post__meta"><time datetime="2026-06-18">18 June 2026</time></p>
             <h3>Respiratory Protective Devices (RPD) and Assigned Protection Factors (APF)</h3>
-            <p class="post__excerpt">What an Assigned Protection Factor is, and how it helps you choose the right respiratory protection for your work, task or hazard.</p>
+            <p class="post__excerpt">Knowing what Protection Factors are and how they help you select the appropriate respiratory protection.</p>
             <a class="link" href="https://www.fta.net.au/post/assigned-protection-factors-apf-respirator-selection-australia" aria-label="Read the article: Respiratory Protective Devices (RPD) and Assigned Protection Factors (APF)">Read Article <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -1309,7 +1304,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
           <div class="post__body">
             <p class="post__meta"><time datetime="2026-02-25">25 February 2026</time></p>
             <h3>What Is a Mask Seal Check, and Are They Reliable?</h3>
-            <p class="post__excerpt">A seal check confirms a respirator is on correctly each day, but it is not a reliable way to confirm fit and cannot replace formal fit testing.</p>
+            <p class="post__excerpt">A quick, user-performed check to confirm that a respirator has been put on correctly.</p>
             <a class="link" href="https://www.fta.net.au/post/what-is-a-mask-seal-check-and-are-they-reliable" aria-label="Read the article: What Is a Mask Seal Check, and Are They Reliable?">Read Article <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -1344,7 +1339,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
     <div class="grid footer__grid">
       <div class="f-brand">
         <a class="brand" href="#home" aria-label="Fit Test Australia, back to top"><svg class="brand__logo" viewBox="2.818 2.83 561.272 230.71" role="img" aria-label="Fit Test Australia"><use href="#fta-logo"/></svg></a>
-        <p>Quantitative respiratory fit testing since 2019. Seven clinics across Australia, mobile testing nationally, RESP-FIT accredited and members of the AIOH.</p>
+        <p>Quantitative respiratory fit testing since 2019. RESP-FIT accredited and members of the AIOH.</p>
         <div class="social" aria-label="Social media">
           <a href="https://www.instagram.com/fittestaustralia/" aria-label="Fit Test Australia on Instagram"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg></a>
           <a href="https://www.facebook.com/fittestaustralia/" aria-label="Fit Test Australia on Facebook"><svg class="ic" aria-hidden="true"><use href="#i-facebook"/></svg></a>
@@ -1488,21 +1483,11 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
 
     const SPEED = 42;                       // px per second
     let pos = 0, kick = 0, last = performance.now();
-    let userPaused = reduce, hover = false, focus = false, dragging = false, visible = true;
-    const toggle = d.querySelector('[data-slider-toggle]');
-    const syncToggle = () => {
-      toggle.setAttribute('aria-pressed', String(userPaused));
-      toggle.setAttribute('aria-label', userPaused ? 'Play slider' : 'Pause slider');
-    };
-    syncToggle();
-    toggle.addEventListener('click', () => { userPaused = !userPaused; syncToggle(); });
+    const autoplay = !reduce;
+    let dragging = false, visible = true;
     d.querySelector('[data-slider-prev]').addEventListener('click', () => { kick += step; });
     d.querySelector('[data-slider-next]').addEventListener('click', () => { kick -= step; });
 
-    slider.addEventListener('mouseenter', () => { hover = true; });
-    slider.addEventListener('mouseleave', () => { hover = false; });
-    slider.addEventListener('focusin', () => { focus = true; });
-    slider.addEventListener('focusout', () => { focus = false; });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(slider);
     }
@@ -1515,6 +1500,7 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
     });
     addEventListener('pointermove', e => {
       if (!dragging) return;
+      if (e.pointerType === 'mouse' && e.buttons === 0) { endDrag(); return; }
       const dx = e.clientX - startX;
       if (!moved && Math.abs(dx) > 6) { moved = true; slider.classList.add('is-dragging'); }
       if (moved) pos = startPos + dx;
@@ -1522,12 +1508,14 @@ html.js [data-reveal].is-in{opacity:1;animation:rise .85s var(--ease) var(--d,0m
     const endDrag = () => { dragging = false; slider.classList.remove('is-dragging'); };
     addEventListener('pointerup', endDrag);
     addEventListener('pointercancel', endDrag);
+    addEventListener('blur', endDrag);
+    d.addEventListener('mouseleave', endDrag);
     slider.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
 
     const frame = t => {
       const dt = Math.min(0.05, (t - last) / 1000); last = t;
       if (visible && setW) {
-        if (!userPaused && !hover && !focus && !dragging) pos -= SPEED * dt;
+        if (autoplay && !dragging) pos -= SPEED * dt;
         if (kick) {
           const s = kick * Math.min(1, dt * 7);
           pos += s; kick -= s;
